@@ -1,0 +1,20 @@
+{
+  "name": "within-element",
+  "description": "check if an element is within the element",
+  "version": "0.0.1",
+  "keywords": [
+    "browser",
+    "dom",
+    "element"
+  ],
+  "component": {
+    "scripts": {
+      "within-element/index.js": "index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/within-element.git"
+  },
+  "license": "MIT"
+}
