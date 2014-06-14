@@ -4,17 +4,22 @@
     <title>within-element test</title>
   </head>
   <body>
-    <div class="a">
-      <div class="c">
+    <div id="a">
+      <div id="c">
       </div>
     </div>
-    <div class="b">
+    <div id="b">
     </div>
     <script src="build/build.js"></script>
     <script>
       var within = require('within-element');
 
-      
+      var a = document.getElementById('a');
+      var b = document.getElementById('b');
+      var c = document.getElementById('c');
+      console.log('should be false:', within(b, a));
+      console.log('should be true:', within(c, a));
+
     </script>
   </body>
 </html>
