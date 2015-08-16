@@ -16,11 +16,6 @@ module.exports = function within (child, parent) {
   if (child.commonAncestorContainer) child = child.commonAncestorContainer;
   else if (child.endContainer) child = child.endContainer;
 
-  // traverse up the `parentNode` properties until `parent` is found
-  var node = child;
-  while (node = node.parentNode) {
-    if (node == parent) return true;
-  }
-
-  return false;
+  // ask the browser if parent contains child
+  return parent.contains(child);
 };
